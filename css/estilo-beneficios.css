@@ -1,20 +1,33 @@
-.beneficios{
+/* Estilos para la sección de beneficios */
+.beneficios {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr; /* Por defecto, una columna en dispositivos pequeños */
     text-align: center;
-    padding-top:20px ;
+    padding-top: 20px;
     gap: 30px;
     margin: 20px;
- 
 }
 
-.img-beneficio{
-    width: 400px;
-    height: 300px;
-    padding-left:70px ;
+.img-beneficio {
+    width: 100%; /* Ajustar el ancho al 100% del contenedor */
+    max-width: 400px; /* Limitar el ancho máximo */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
 }
 
-.parrafo{
+.parrafo {
     text-align: center;
-    padding: ;
+}
+
+/* Media queries para dispositivos medianos y grandes */
+@media (min-width: 576px) {
+    .beneficios {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos medianos */
+    }
+}
+
+@media (min-width: 768px) {
+    .beneficios {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en dispositivos grandes */
+    }
 }

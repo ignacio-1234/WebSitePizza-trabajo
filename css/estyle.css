@@ -19,3 +19,64 @@ main{
 .card-img-top{
     height: 400px;
 }
+
+/* Estilos para las columnas de tarjetas */
+.column-card, .column-card-second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px; /* Agregamos un poco de espacio entre las tarjetas */
+}
+
+.card {
+    width: calc(50% - 20px); /* Calculamos el ancho de la tarjeta para ocupar la mitad del contenedor con un margen de 20px */
+    margin-bottom: 20px; /* Agregamos un margen inferior para separar las tarjetas */
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto; /* Mantenemos la proporción de la imagen */
+}
+
+
+
+/* Media query para dispositivos con un ancho mínimo de 576px (dispositivos medianos) */
+@media (min-width: 576px) {
+    .column-card, .column-card-second {
+        justify-content: space-between; /* Espaciado uniforme entre las columnas */
+    }
+
+    .card-img-top {
+        height: 300px; /* Reducir la altura de la imagen en dispositivos medianos */
+    }
+}
+
+/* Media query para dispositivos con un ancho mínimo de 768px (dispositivos grandes) */
+@media (min-width: 768px) {
+    .column-card, .column-card-second {
+        justify-content: space-between; /* Espaciado uniforme entre las columnas */
+    }
+
+    .card-img-top {
+        height: 400px; /* Restaurar la altura original de la imagen en dispositivos grandes */
+    }
+}
+
+
+/* Media query para dispositivos con un ancho mínimo de 576px (dispositivos medianos) */
+@media (min-width: 576px) {
+    .card {
+        width: calc(50% - 20px); /* Calculamos el ancho de la tarjeta para ocupar la mitad del contenedor con un margen de 20px */
+    }
+}
+
+/* Media query para dispositivos con un ancho mínimo de 768px (dispositivos grandes) */
+@media (min-width: 768px) {
+    .column-card, .column-card-second {
+        justify-content: space-between; /* Espaciado uniforme entre las columnas */
+    }
+
+    .card {
+        width: calc(33.33% - 20px); /* Calculamos el ancho de la tarjeta para ocupar un tercio del contenedor con un margen de 20px */
+    }
+}
