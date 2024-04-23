@@ -34,3 +34,22 @@
 .contenedor{
     padding-top: 10px;
 }
+
+/* Ajuste de estilos para dispositivos pequeños */
+
+  /* Ajuste de estilos para dispositivos medianos y grandes */
+  @media (min-width: 375px) {
+    .carrusel {
+      display: flex; /* Usar flexbox para alinear los elementos verticalmente */
+      flex-direction: column; /* Alinear los elementos en una columna */
+    }
+    
+    .carrusel {
+      order: 1; /* El carrusel viene primero en dispositivos medianos y grandes */
+    }
+    
+    .seccion {
+      order: 2; /* El texto y el botón vienen después en dispositivos medianos y grandes */
+    }
+  }
+  
